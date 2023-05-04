@@ -29,8 +29,8 @@ color: #0A3871;
 #rectangle{
     position: absolute;
     width: 400px;
-    height: 830px;
-    left: 1250px;
+    height: 700px;
+    left: 1180px;
     top: 40px;
     
     /* White */
@@ -46,6 +46,11 @@ color: #0A3871;
 input[type="text"]::placeholder {
     color: #495057;
     font-style: italic;
+  }
+  .text{
+    display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
   }
 #encriptar{
 display: flex;
@@ -135,33 +140,7 @@ position: absolute;
 width: 680px;
 height: 67px;
 left: 240px;
-top: 800px;
-}
-.texto1{
-    
-width: 336px;
-height: 58px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 120%;
-/* or 29px */
-
-text-align: center;
-
-/* Gray/gray-500 */
-
-color: #343A40;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
+top: 700px;
 }
 #texto{
 display: flex;
@@ -181,7 +160,7 @@ top: 700px;
     width: 336px;
     height: 304px;
     left: 25px;
-    top: 284px;
+    top: 120px;
     max-width: 100% !important;
 }
 .caja{
@@ -195,17 +174,17 @@ position: absolute;
 width: 336px;
 height: 122px;
 left: 20px;
-top: 619px;
+top: 450px;
 max-width: 100%;
 }
 #texto1{
     width: 336px;
-    height: 58px;
+    height: 10px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 120%;
+    line-height: normal;
     text-align: center;
     color: #343A40;
     flex: none;
@@ -216,7 +195,7 @@ max-width: 100%;
 
 #texto2{
     width: 336px;
-    height: 48px;
+    height: 10px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -251,7 +230,7 @@ position: absolute;
 width: 229px;
 height: 18px;
 left: 240px;
-top: 851px;
+top: 680px;
 
 }
 #texto3{
@@ -292,8 +271,8 @@ gap: 8px;
 position: absolute;
 width: 336px;
 height: 67px;
-left: 40px;
-top: 700px;
+left: 25px;
+top: 600px;
 
 /* Dark blue/dark-blue-300 */
 
@@ -336,27 +315,29 @@ border-radius: 24px;
 
 position: absolute;
 width: 100%;
-height: 700px;
+height: 600px;
 max-width: auto;
 max-height: 1200px;
-top: -600px;
+top: -450px;
 
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 32px;
-line-height: 150%;
+line-height: normal;
 text-align: left;
 /* or 48px */
 
 
 color: #0A3871;
 }
-@media screen and (max-width: 1024px) {
+
+
+@media screen and (max-width: 1080px) {
     #rectangle{
-        width: 300px;
-        height: 300px;
-        left: 100%;
+        width: 700px;
+        max-height: 450px;
+        left: 55%;
         transform: translateX(-50%);
         top: 900px;
     }
@@ -375,29 +356,45 @@ color: #0A3871;
     #copy{
         top: 280px;
     }
+    #encriptar{
+        width: 200px;
+    }
+    #desencriptar{
+        width: 200px;
+    }
+    #reset{
+        width: 200px;
+    }
+    .caja{
     
+    left: 25%;
+    }
+    #imagen{
+       left: 25%;
+    }
+    #frame3{
+        left: 13%;
+    }
+    .anunciado{
+        left: 13%;
+    }
+
 }
 
 /* Estilos para móvil */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1080px) {
     #rectangle{
-        width: 100%;
+        width: 600px;
         height: 300px;
-        left: 0;
-        top: 0;
-        margin: 0;
-        border-radius: 0;
-        box-shadow: none;
+        left: 45%;
+        transform: translateX(-50%);
+        top: 820px;
     }
-    
-    #imagen{
-        position: static;
-        width: 100%;
-        height: auto;
-        max-width: none;
+    .texto{
+        flex-basis: 100%;
     }
-    
+   
     #texto1{
         width: 100%;
         font-size: 20px;
@@ -409,4 +406,45 @@ color: #0A3871;
         font-size: 14px;
         height: auto;
     }
+    #copy{
+        top: 280px;
+    }
+    #imagen{
+        left: 20%;
+    }
+    .texto{
+        width: 16em;
+        left: 13%;
+    }
+
+}
+@media screen and (max-width: 280px) {
+    #rectangle{
+       max-width: 230px;
+      
+        height: 300px;
+        left: 100%;
+        transform: translateX(-50%);
+        top: 900px;
+    }
+   
+    #texto1{
+        width: auto;
+        font-size: 20px;
+        height: auto;
+    }
+    
+    #texto2{
+        width: 100%;
+        font-size: 14px;
+        height: auto;
+    }
+    #copy{
+        top: 280px;
+    }
+    #imagen{
+        width: 210px;
+        height: 300px;
+    }
+
 }
